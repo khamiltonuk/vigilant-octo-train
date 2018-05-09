@@ -6,9 +6,9 @@ export default function History(props) {
   const { removeValue, values } = props;
   return (
     <ul className="history group">
-      {values.map(el => {
+      {values.map((el, i) => {
         return (
-          <li>
+          <li key={i}>
             {el} <button onClick={removeValue}>&#10006;</button>
           </li>
         );

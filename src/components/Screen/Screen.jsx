@@ -3,17 +3,16 @@ import "./Screen.css";
 
 export default function Screen(props) {
   const calculatedFontSize = props.displayValue.length > 10 ? "1em" : "2em";
-  console.log(calculatedFontSize);
   return (
-    <div className="screen">
+    <form className="screen" onSubmit={e => props.enterNumber(e)}>
       <input
+        pattern="\d*"
         style={{ fontSize: calculatedFontSize }}
         onChange={e => props.handleChange(e)}
+        onFocus={props.wipeInput}
         value={props.displayValue}
       />
-      <button type="submit" onClick={() => props.enterNumber()}>
-        Input number
-      </button>
-    </div>
+      <button type="submit">Input number</button>
+    </form>
   );
 }

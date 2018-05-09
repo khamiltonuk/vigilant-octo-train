@@ -8,7 +8,7 @@ export default function Keypad(props) {
     clearInput,
     clearAll,
     addAll,
-    sqaureAll,
+    squareAll,
     meanAll,
     getVariance,
     meanOfAllSquared
@@ -54,7 +54,7 @@ export default function Keypad(props) {
       <button className="operation-key" onClick={() => addAll()}>
         add
       </button>
-      <button className="operation-key" onClick={() => sqaureAll()}>
+      <button className="operation-key" onClick={() => squareAll()}>
         square all
       </button>
       <button className="operation-key" onClick={() => meanAll()}>

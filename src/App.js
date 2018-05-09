@@ -17,8 +17,8 @@ class App extends Component {
     displayValue: "0",
     values: []
   };
-  handleInputChange = e => {
-    console.log(e);
+  handleInputChange = event => {
+    this.setState({ displayValue: event.target.value });
   };
   keypadPress = val => {
     const { displayValue } = this.state;
@@ -27,24 +27,31 @@ class App extends Component {
       displayValue: displayValue === "0" ? String(val) : displayValue + val
     });
   };
-  enterNumber = () => {
+  enterNumber = e => {
+    e.preventDefault();
     const { displayValue, values } = this.state;
     this.setState({
       values: [...values, displayValue],
       displayValue: "0"
     });
-    console.log(this.state);
   };
   clearInput = () => {
     this.setState({
       displayValue: "0"
     });
   };
+  wipeInput = () => {
+    if (this.state.displayValue === "0")
+      this.setState({
+        displayValue: ""
+      });
+  };
   clearAll = () => {
     this.setState({
       values: []
     });
   };
+
   addAllNumbers = () => {
     const { values } = this.state;
     const anwser = addAll(values);
@@ -53,21 +60,30 @@ class App extends Component {
       values: []
     });
   };
+  squareAllNumbers = () => {
+    const { values } = this.state;
+    const anwser = squareAll(values);
+    this.setState({
+      displayValue: anwser,
+      values: []
+    });
+  };
 
   render() {
-    const { displayValue } = this.state;
+    const { displayValue, values } = this.state;
     return (
       <div className="calculator">
         <Screen
           displayValue={displayValue}
           handleChange={this.handleInputChange}
           enterNumber={this.enterNumber}
+          wipeInput={this.wipeInput}
         />
 
         <Keypad
           keypadPress={this.keypadPress}
           clearInput={this.clearInput}
-          squareAll={squareAll}
+          squareAll={this.squareAllNumbers}
           addAll={this.addAllNumbers}
           clearAll={this.clearAll}
           meanAll={meanAll}
@@ -75,7 +91,7 @@ class App extends Component {
           getVariance={getVariance}
           stringToNumbers={stringToNumbers}
         />
-        <History values={this.state.values} />
+        <History values={values} />
       </div>
     );
   }
