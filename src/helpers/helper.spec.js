@@ -1,26 +1,20 @@
-import { map, reduce, flow } from "lodash/fp";
+import {
+  squareAll,
+  addAll,
+  meanAll,
+  meanOfAllSquared,
+  getVariance,
+  stringToNumbers
+} from "./helper";
 
-const squareAll = map(num => num * num);
-
-function addAll(arr) {
-  return arr.reduce((a, b) => a + b);
-}
-
-function meanAll(arr) {
-  return addAll(arr) / arr.length;
-}
-
-const meanOfAllSquared = flow(squareAll, meanAll);
-
-function getVariance(arr) {
-  const mean = meanAll(arr);
-  return arr.map(int => {
-    return int - mean;
+describe("stringToNumbers", () => {
+  test("should convert an array of strings to numbers", () => {
+    expect(stringToNumbers(["1", "4", "9", "16"])).toEqual([1, 4, 9, 16]);
   });
-}
+});
 
 describe("squareAll", () => {
-  test("sqaures all numbers in an array", () => {
+  test("should sqaures all numbers in an array", () => {
     expect(squareAll([1, 2, 3, 4])).toEqual([1, 4, 9, 16]);
   });
 });
