@@ -6,10 +6,18 @@ function addAll(arr) {
   return arr.reduce((a, b) => a + b);
 }
 
-function averageAll(arr) {
+function meanAll(arr) {
   return addAll(arr) / arr.length;
 }
-const meanOfAllSquared = flow(squareAll, averageAll);
+
+const meanOfAllSquared = flow(squareAll, meanAll);
+
+function getVariance(arr) {
+  const mean = meanAll(arr);
+  return arr.map(int => {
+    return int - mean;
+  });
+}
 
 describe("squareAll", () => {
   test("sqaures all numbers in an array", () => {
@@ -23,14 +31,20 @@ describe("addAll", () => {
   });
 });
 
-describe("averageAll", () => {
+describe("meanAll", () => {
   test("should compute the mean value of the list of numbers", () => {
-    expect(averageAll([1, 2, 3, 4])).toEqual(2.5);
+    expect(meanAll([1, 2, 3, 4])).toEqual(2.5);
   });
 });
 
 describe("meanOfAllSquared", () => {
   test("should compute the mean value of the numbers squared in the list", () => {
-    expect(meanOfAllSquared([1, 2, 3, 4])).toEqual(2.5);
+    expect(meanOfAllSquared([1, 2, 3, 4])).toEqual(7.5);
+  });
+});
+
+describe("getVariance", () => {
+  test("should compute the variance of the numbers in the list", () => {
+    expect(getVariance([1, 2, 3, 4])).toEqual([-1.5, -0.5, 0.5, 1.5]);
   });
 });
