@@ -3,6 +3,17 @@ body {
   height: 100%;
 }
 
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -13,7 +24,7 @@ body {
 
 .calculator {
   text-align: center;
-  width: 300px;
+  width: 340px;
   padding: 20px;
   background: #df9339;
 }

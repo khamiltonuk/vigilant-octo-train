@@ -1,7 +1,6 @@
 .keypad {
   margin-bottom: 25px;
 }
-
 .operation-key,
 .number-key {
   height: 60px;
@@ -9,7 +8,6 @@
   color: white;
   float: left;
 }
-
 .operation-key {
   background: #cf402c;
 }
