@@ -5,7 +5,7 @@ export default function Screen(props) {
   return (
     <div className="screen">
       <input onChange={e => props.handleChange(e)} value={props.displayValue} />
-      <button type="submit" />
+      <button type="submit" onSubmit={props.enterValue} />
     </div>
   );
 }
