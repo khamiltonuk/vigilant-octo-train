@@ -6,6 +6,7 @@ export default function Keypad(props) {
   const {
     keypadPress,
     clearInput,
+    clearAll,
     addAll,
     sqaureAll,
     meanAll,
@@ -46,6 +47,9 @@ export default function Keypad(props) {
       </button>
       <button className="operation-key" onClick={() => clearInput()}>
         clear
+      </button>
+      <button className="operation-key" onClick={() => clearAll()}>
+        clear all
       </button>
       <button className="operation-key" onClick={() => addAll()}>
         add

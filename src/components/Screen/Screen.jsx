@@ -5,7 +5,9 @@ export default function Screen(props) {
   return (
     <div className="screen">
       <input onChange={e => props.handleChange(e)} value={props.displayValue} />
-      <button type="submit" onClick={() => props.enterNumber()} />
+      <button type="submit" onClick={() => props.enterNumber()}>
+        Input number
+      </button>
     </div>
   );
 }

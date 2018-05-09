@@ -17,7 +17,7 @@ class App extends Component {
     displayValue: "0",
     values: []
   };
-  handleChange = e => {
+  handleInputChange = e => {
     console.log(e);
   };
   keypadPress = val => {
@@ -40,10 +40,17 @@ class App extends Component {
       displayValue: "0"
     });
   };
-  doMaths = () => {
-    const { values } = this.state;
+  clearAll = () => {
     this.setState({
-      displayValue: anwser
+      values: []
+    });
+  };
+  addAllNumbers = () => {
+    const { values } = this.state;
+    const anwser = addAll(values);
+    this.setState({
+      displayValue: anwser,
+      values: []
     });
   };
 
@@ -53,20 +60,22 @@ class App extends Component {
       <div className="calculator">
         <Screen
           displayValue={displayValue}
-          handleChange={this.handleChange}
+          handleChange={this.handleInputChange}
           enterNumber={this.enterNumber}
         />
-        <History values={this.state.values} />
+
         <Keypad
           keypadPress={this.keypadPress}
           clearInput={this.clearInput}
           squareAll={squareAll}
-          addAll={addAll}
+          addAll={this.addAllNumbers}
+          clearAll={this.clearAll}
           meanAll={meanAll}
           meanOfAllSquared={meanOfAllSquared}
           getVariance={getVariance}
           stringToNumbers={stringToNumbers}
         />
+        <History values={this.state.values} />
       </div>
     );
   }

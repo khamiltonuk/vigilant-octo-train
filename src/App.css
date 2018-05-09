@@ -16,16 +16,9 @@ body {
 }
 
 button {
-  border-radius: 10px;
   color: white;
   border: 0;
   background: #744620;
   height: 50px;
   width: 50px;
-}
-.operator-keys {
-  background: #cf402c;
-}
-
-.number-keys {
 }
