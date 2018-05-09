@@ -14,7 +14,7 @@ export default function Keypad(props) {
     meanOfAllSquared
   } = props;
   return (
-    <div className="keypad">
+    <div className="keypad group">
       <button className="number-key" onClick={() => keypadPress(0)}>
         0
       </button>

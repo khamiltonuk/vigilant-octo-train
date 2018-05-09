@@ -1,3 +1,24 @@
+.keypad {
+  margin-bottom: 25px;
+}
+
+.operation-key,
+.number-key {
+  height: 60px;
+  width: 60px;
+  color: white;
+  float: left;
+}
+
 .operation-key {
   background: #cf402c;
+}
+.operation-key:hover {
+  background: #a13222;
+}
+.number-key {
+  background: #744620;
+}
+.number-key:hover {
+  background: #593619;
 }

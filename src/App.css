@@ -1,24 +1,31 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
   background: #e8ceac;
 }
 
 .calculator {
   text-align: center;
-  width: 250px;
-  height: 330px;
+  width: 300px;
   padding: 20px;
   background: #df9339;
 }
 
 button {
-  color: white;
   border: 0;
-  background: #744620;
-  height: 50px;
-  width: 50px;
+  background: none;
+  width: auto;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }

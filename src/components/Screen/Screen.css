@@ -1,12 +1,19 @@
 .screen {
   background: #7ba89e;
-  border-radius: 10px;
-  border: 10px solid 71461f;
+  margin-bottom: 25px;
+  position: relative;
+}
+.screen button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
 }
 
 input {
   background: none;
   border: 0;
+  padding: 10px 90px 10px 10px;
   font-size: 2em;
-  max-width: 100%g;
+  width: 100%;
 }

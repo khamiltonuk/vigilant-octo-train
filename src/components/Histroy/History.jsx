@@ -5,11 +5,11 @@ import "./History.css";
 export default function History(props) {
   const { removeValue, values } = props;
   return (
-    <ul>
+    <ul className="history group">
       {values.map(el => {
         return (
           <li>
-            {el} <button onClick={removeValue}>x</button>
+            {el} <button onClick={removeValue}>&#10006;</button>
           </li>
         );
       })}
