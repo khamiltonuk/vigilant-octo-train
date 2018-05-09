@@ -1,4 +1,4 @@
-import { map, reduce } from "lodash/fp";
+import { map, reduce, flow } from "lodash/fp";
 
 const squareAll = map(num => num * num);
 
@@ -9,6 +9,7 @@ function addAll(arr) {
 function averageAll(arr) {
   return addAll(arr) / arr.length;
 }
+const meanOfAllSquared = flow(squareAll, averageAll);
 
 describe("squareAll", () => {
   test("sqaures all numbers in an array", () => {
@@ -17,13 +18,19 @@ describe("squareAll", () => {
 });
 
 describe("addAll", () => {
-  test("adds all numbers in an array", () => {
+  test("should compute the sum of the list of numbers", () => {
     expect(addAll([1, 2, 3, 4])).toEqual(10);
   });
 });
 
 describe("averageAll", () => {
-  test("should finds the mean of all the numbers", () => {
+  test("should compute the mean value of the list of numbers", () => {
     expect(averageAll([1, 2, 3, 4])).toEqual(2.5);
+  });
+});
+
+describe("meanOfAllSquared", () => {
+  test("should compute the mean value of the numbers squared in the list", () => {
+    expect(meanOfAllSquared([1, 2, 3, 4])).toEqual(2.5);
   });
 });
