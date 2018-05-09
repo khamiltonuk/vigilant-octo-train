@@ -17,11 +17,19 @@ describe("squareAll", () => {
   test("should sqaures all numbers in an array", () => {
     expect(squareAll([1, 2, 3, 4])).toEqual([1, 4, 9, 16]);
   });
+
+  test("should sqaures all strings in an array", () => {
+    expect(squareAll(["1", "2", "3", "4"])).toEqual([1, 4, 9, 16]);
+  });
 });
 
 describe("addAll", () => {
   test("should compute the sum of the list of numbers", () => {
     expect(addAll([1, 2, 3, 4])).toEqual(10);
+  });
+
+  test("should compute the sum of the list of strings contianing numbers", () => {
+    expect(addAll(["1", "2", "3", "4"])).toEqual(10);
   });
 });
 
