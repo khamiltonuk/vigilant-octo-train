@@ -2,18 +2,39 @@ import React from "react";
 
 import "./Keypad.css";
 
-export default function Keypad() {
+export default function Keypad(props) {
   return (
     <div className="keypad">
-      <button className="number-key">1</button>
-      <button className="number-key">2</button>
-      <button className="number-key">3</button>
-      <button className="number-key">4</button>
-      <button className="number-key">5</button>
-      <button className="number-key">6</button>
-      <button className="number-key">7</button>
-      <button className="number-key">8</button>
-      <button className="number-key">9</button>
+      <button className="number-key" onClick={() => props.keypadPress(0)}>
+        0
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(1)}>
+        1
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(2)}>
+        2
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(3)}>
+        3
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(4)}>
+        4
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(5)}>
+        5
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(6)}>
+        6
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(7)}>
+        7
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(8)}>
+        8
+      </button>
+      <button className="number-key" onClick={() => props.keypadPress(9)}>
+        9
+      </button>
       <button className="operation-key">clear</button>
       <button className="operation-key">add</button>
       <button className="operation-key">sum</button>

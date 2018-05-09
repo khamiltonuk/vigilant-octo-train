@@ -1,0 +1,12 @@
+.screen {
+  background: #7ba89e;
+  border-radius: 10px;
+  border: 10px solid 71461f;
+}
+
+input {
+  background: none;
+  border: 0;
+  font-size: 2em;
+  max-width: 100%g;
+}

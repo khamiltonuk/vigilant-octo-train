@@ -5,12 +5,24 @@ import History from "./components/Histroy/History";
 import "./App.css";
 
 class App extends Component {
+  state = {
+    displayValue: "0",
+    values: []
+  };
+  keypadPress = val => {
+    const { displayValue } = this.state;
+
+    this.setState({
+      displayValue: displayValue + val
+    });
+  };
   render() {
+    const { displayValue } = this.state;
     return (
       <div className="calculator">
-        <Screen />
+        <Screen displayValue={displayValue} />
         <History />
-        <Keypad />
+        <Keypad keypadPress={this.keypadPress} />
       </div>
     );
   }

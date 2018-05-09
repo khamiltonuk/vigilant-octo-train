@@ -11,13 +11,8 @@ body {
   text-align: center;
   width: 250px;
   height: 330px;
+  padding: 20px;
   background: #df9339;
-}
-
-.screen {
-  background: #7ba89e;
-  border-radius: 10px;
-  border: 10px solid 71461f;
 }
 
 button {
