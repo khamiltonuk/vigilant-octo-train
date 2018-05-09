@@ -33,10 +33,17 @@ class App extends Component {
       values: [...values, displayValue],
       displayValue: "0"
     });
+    console.log(this.state);
   };
   clearInput = () => {
     this.setState({
       displayValue: "0"
+    });
+  };
+  doMaths = () => {
+    const { values } = this.state;
+    this.setState({
+      displayValue: anwser
     });
   };
 
@@ -49,7 +56,7 @@ class App extends Component {
           handleChange={this.handleChange}
           enterNumber={this.enterNumber}
         />
-        <History />
+        <History values={this.state.values} />
         <Keypad
           keypadPress={this.keypadPress}
           clearInput={this.clearInput}
