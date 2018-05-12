@@ -10,6 +10,7 @@ export default function Screen(props) {
         style={{ fontSize: calculatedFontSize }}
         onChange={e => props.handleChange(e)}
         onFocus={props.wipeInput}
+        autoFocus="true"
         value={props.displayValue}
       />
       <button type="submit">Input number</button>

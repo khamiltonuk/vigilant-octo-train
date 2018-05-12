@@ -52,17 +52,36 @@ class App extends Component {
     });
   };
 
-  addAllNumbers = () => {
-    const { values } = this.state;
-    const anwser = addAll(values);
+  removeValue = i => {
+    var arr = this.state.values;
+    arr.splice(i, 1);
     this.setState({
-      displayValue: anwser,
-      values: []
+      values: arr
     });
   };
-  squareAllNumbers = () => {
+
+  calculate = type => {
     const { values } = this.state;
-    const anwser = squareAll(values);
+    let anwser;
+    switch (type) {
+      case "getVariance":
+        anwser = getVariance(values);
+        break;
+      case "meanOfAllSquared":
+        anwser = meanOfAllSquared(values);
+        break;
+      case "meanAll":
+        anwser = meanAll(values);
+        break;
+      case "squareAll":
+        anwser = squareAll(values);
+        break;
+      case "addAll":
+        anwser = addAll(values);
+        break;
+      default:
+        anwser = 0;
+    }
     this.setState({
       displayValue: anwser,
       values: []
@@ -83,15 +102,11 @@ class App extends Component {
         <Keypad
           keypadPress={this.keypadPress}
           clearInput={this.clearInput}
-          squareAll={this.squareAllNumbers}
-          addAll={this.addAllNumbers}
           clearAll={this.clearAll}
-          meanAll={meanAll}
-          meanOfAllSquared={meanOfAllSquared}
-          getVariance={getVariance}
+          calculate={this.calculate}
           stringToNumbers={stringToNumbers}
         />
-        <History values={values} />
+        <History values={values} removeValue={this.removeValue} />
       </div>
     );
   }

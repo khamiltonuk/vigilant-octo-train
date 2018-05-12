@@ -9,7 +9,7 @@ export default function History(props) {
       {values.map((el, i) => {
         return (
           <li key={i}>
-            {el} <button onClick={removeValue}>&#10006;</button>
+            {el} <button onClick={() => removeValue(i)}>&#10006;</button>
           </li>
         );
       })}

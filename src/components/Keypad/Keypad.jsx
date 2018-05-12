@@ -3,16 +3,7 @@ import React from "react";
 import "./Keypad.css";
 
 export default function Keypad(props) {
-  const {
-    keypadPress,
-    clearInput,
-    clearAll,
-    addAll,
-    squareAll,
-    meanAll,
-    getVariance,
-    meanOfAllSquared
-  } = props;
+  const { keypadPress, clearInput, clearAll, calculate } = props;
   return (
     <div className="keypad group">
       <button className="number-key" onClick={() => keypadPress(0)}>
@@ -51,19 +42,25 @@ export default function Keypad(props) {
       <button className="operation-key" onClick={() => clearAll()}>
         clear all
       </button>
-      <button className="operation-key" onClick={() => addAll()}>
+      <button className="operation-key" onClick={() => calculate("addAll")}>
         add
       </button>
-      <button className="operation-key" onClick={() => squareAll()}>
+      <button className="operation-key" onClick={() => calculate("squareAll")}>
         square all
       </button>
-      <button className="operation-key" onClick={() => meanAll()}>
+      <button className="operation-key" onClick={() => calculate("meanAll")}>
         mean
       </button>
-      <button className="operation-key" onClick={() => meanOfAllSquared()}>
+      <button
+        className="operation-key"
+        onClick={() => calculate("meanOfAllSquared")}
+      >
         mean of squared
       </button>
-      <button className="operation-key" onClick={() => getVariance()}>
+      <button
+        className="operation-key"
+        onClick={() => calculate("getVariance")}
+      >
         get variance
       </button>
     </div>
