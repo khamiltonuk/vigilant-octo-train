@@ -22,7 +22,11 @@ export function getVariance(arr) {
 }
 
 export function stringToNumbers(arr) {
-  return arr.map(int => {
-    return parseInt(int, 10);
-  });
+  return arr
+    .map(int => {
+      return parseInt(int, 10);
+    })
+    .filter(val => {
+      return !isNaN(val);
+    });
 }
