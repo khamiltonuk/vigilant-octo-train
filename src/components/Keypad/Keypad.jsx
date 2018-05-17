@@ -4,65 +4,31 @@ import "./Keypad.css";
 
 export default function Keypad(props) {
   const { keypadPress, clearInput, clearAll, calculate } = props;
+  const operations = [
+    "addAll",
+    "squareAll",
+    "meanAll",
+    "meanOfAllSquared",
+    "getVariance"
+  ];
   return (
     <div className="keypad group">
-      <button className="number-key" onClick={() => keypadPress(0)}>
-        0
-      </button>
-      <button className="number-key" onClick={() => keypadPress(1)}>
-        1
-      </button>
-      <button className="number-key" onClick={() => keypadPress(2)}>
-        2
-      </button>
-      <button className="number-key" onClick={() => keypadPress(3)}>
-        3
-      </button>
-      <button className="number-key" onClick={() => keypadPress(4)}>
-        4
-      </button>
-      <button className="number-key" onClick={() => keypadPress(5)}>
-        5
-      </button>
-      <button className="number-key" onClick={() => keypadPress(6)}>
-        6
-      </button>
-      <button className="number-key" onClick={() => keypadPress(7)}>
-        7
-      </button>
-      <button className="number-key" onClick={() => keypadPress(8)}>
-        8
-      </button>
-      <button className="number-key" onClick={() => keypadPress(9)}>
-        9
-      </button>
+      {[...Array(10)].map((e, i) => (
+        <button className="number-key" key={i} onClick={() => keypadPress(i)}>
+          {i}
+        </button>
+      ))}
       <button className="operation-key" onClick={() => clearInput()}>
         clear
       </button>
       <button className="operation-key" onClick={() => clearAll()}>
         clear all
       </button>
-      <button className="operation-key" onClick={() => calculate("addAll")}>
-        add
-      </button>
-      <button className="operation-key" onClick={() => calculate("squareAll")}>
-        square all
-      </button>
-      <button className="operation-key" onClick={() => calculate("meanAll")}>
-        mean
-      </button>
-      <button
-        className="operation-key"
-        onClick={() => calculate("meanOfAllSquared")}
-      >
-        mean of squared
-      </button>
-      <button
-        className="operation-key"
-        onClick={() => calculate("getVariance")}
-      >
-        get variance
-      </button>
+      {operations.map((e, i) => (
+        <button className="operation-key" key={i} onClick={() => calculate(e)}>
+          {e}
+        </button>
+      ))}
     </div>
   );
 }
