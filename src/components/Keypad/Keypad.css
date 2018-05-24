@@ -1,10 +1,15 @@
 .keypad {
   margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 60px);
+  grid-gap: 10px;
 }
 .operation-key,
 .number-key {
-  height: 60px;
-  width: 20%;
+  /* height: 60px;
+  min-width: 20%; */
+  height: 100%;
   color: white;
   float: left;
 }

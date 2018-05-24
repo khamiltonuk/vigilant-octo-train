@@ -5,11 +5,11 @@ import "./Keypad.css";
 export default function Keypad(props) {
   const { keypadPress, clearInput, clearAll, calculate } = props;
   const operations = [
-    "addAll",
-    "squareAll",
-    "meanAll",
-    "meanOfAllSquared",
-    "getVariance"
+    "Add All",
+    "Aquare All",
+    "Mean All",
+    "Mean of All Squared",
+    "Get Variance"
   ];
   return (
     <div className="keypad group">

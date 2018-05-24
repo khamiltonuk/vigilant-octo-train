@@ -1,5 +1,29 @@
 import { map, flow } from "lodash/fp";
 
+export function calculateOperation(valuesArr, operation) {
+  let anwser;
+  switch (operation) {
+    case "getVariance":
+      anwser = getVariance(valuesArr);
+      break;
+    case "meanOfAllSquared":
+      anwser = meanOfAllSquared(valuesArr);
+      break;
+    case "meanAll":
+      anwser = meanAll(valuesArr);
+      break;
+    case "squareAll":
+      anwser = squareAll(valuesArr);
+      break;
+    case "addAll":
+      anwser = addAll(valuesArr);
+      break;
+    default:
+      anwser = 0;
+  }
+  return anwser;
+}
+
 export const squareAll = map(num => num * num);
 
 export function add(arr) {
