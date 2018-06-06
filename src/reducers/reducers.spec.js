@@ -19,7 +19,7 @@ describe("Reducer", () => {
     expect(state).toEqual({ displayValue: "0", values: ["3", "22", "7"] });
   });
 
-  test("REMOVE_VALUE", () => {
+  test.skip("REMOVE_VALUE", () => {
     let state;
     state = reducers(
       { displayValue: "0", values: ["3", "22"] },
