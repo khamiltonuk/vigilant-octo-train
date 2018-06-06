@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Keypad should match the snapshot 1`] = `
+<div
+  className="keypad group"
+>
+  <button
+    className="number-key"
+    key="0"
+    onClick={[Function]}
+  >
+    0
+  </button>
+  <button
+    className="number-key"
+    key="1"
+    onClick={[Function]}
+  >
+    1
+  </button>
+  <button
+    className="number-key"
+    key="2"
+    onClick={[Function]}
+  >
+    2
+  </button>
+  <button
+    className="number-key"
+    key="3"
+    onClick={[Function]}
+  >
+    3
+  </button>
+  <button
+    className="number-key"
+    key="4"
+    onClick={[Function]}
+  >
+    4
+  </button>
+  <button
+    className="number-key"
+    key="5"
+    onClick={[Function]}
+  >
+    5
+  </button>
+  <button
+    className="number-key"
+    key="6"
+    onClick={[Function]}
+  >
+    6
+  </button>
+  <button
+    className="number-key"
+    key="7"
+    onClick={[Function]}
+  >
+    7
+  </button>
+  <button
+    className="number-key"
+    key="8"
+    onClick={[Function]}
+  >
+    8
+  </button>
+  <button
+    className="number-key"
+    key="9"
+    onClick={[Function]}
+  >
+    9
+  </button>
+  <button
+    className="operation-key"
+    onClick={[Function]}
+  >
+    clear
+  </button>
+  <button
+    className="operation-key"
+    onClick={[Function]}
+  >
+    clear all
+  </button>
+  <button
+    className="operation-key"
+    key="0"
+    onClick={[Function]}
+  >
+    Add All
+  </button>
+  <button
+    className="operation-key"
+    key="1"
+    onClick={[Function]}
+  >
+    Aquare All
+  </button>
+  <button
+    className="operation-key"
+    key="2"
+    onClick={[Function]}
+  >
+    Mean All
+  </button>
+  <button
+    className="operation-key"
+    key="3"
+    onClick={[Function]}
+  >
+    Mean of All Squared
+  </button>
+  <button
+    className="operation-key"
+    key="4"
+    onClick={[Function]}
+  >
+    Get Variance
+  </button>
+</div>
+`;
