@@ -21,7 +21,6 @@ const Calculator = props => {
         enterNumber={enterNumber}
         wipeInput={clearInput}
       />
-
       <Keypad
         keypadPress={keypadPress}
         clearInput={clearInput}

@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History should behave... 1`] = `
+<ul
+  className="history group"
+>
+  <FlipMovePropConverter
+    delay={0}
+    disableAllAnimations={false}
+    duration={250}
+    easing="ease-out"
+    enterAnimation="elevator"
+    getPosition={[Function]}
+    leaveAnimation="elevator"
+    maintainContainerHeight={false}
+    staggerDelayBy={0}
+    staggerDurationBy={0}
+    typeName="div"
+    verticalAlignment="top"
+  >
+    <li
+      key="0"
+    >
+      25
+       
+      <button
+        onClick={[Function]}
+      >
+        ✖
+      </button>
+    </li>
+    <li
+      key="1"
+    >
+      35
+       
+      <button
+        onClick={[Function]}
+      >
+        ✖
+      </button>
+    </li>
+    <li
+      key="2"
+    >
+      535
+       
+      <button
+        onClick={[Function]}
+      >
+        ✖
+      </button>
+    </li>
+    <li
+      key="3"
+    >
+      53
+       
+      <button
+        onClick={[Function]}
+      >
+        ✖
+      </button>
+    </li>
+  </FlipMovePropConverter>
+</ul>
+`;
+
+exports[`History should match the snapshot 1`] = `
+<ul
+  className="history group"
+>
+  <FlipMovePropConverter
+    delay={0}
+    disableAllAnimations={false}
+    duration={250}
+    easing="ease-out"
+    enterAnimation="elevator"
+    getPosition={[Function]}
+    leaveAnimation="elevator"
+    maintainContainerHeight={false}
+    staggerDelayBy={0}
+    staggerDurationBy={0}
+    typeName="div"
+    verticalAlignment="top"
+  >
+    <li
+      key="0"
+    >
+      25
+       
+      <button
+        onClick={[Function]}
+      >
+        ✖
+      </button>
+    </li>
+    <li
+      key="1"
+    >
+      35
+       
+      <button
+        onClick={[Function]}
+      >
+        ✖
+      </button>
+    </li>
+    <li
+      key="2"
+    >
+      535
+       
+      <button
+        onClick={[Function]}
+      >
+        ✖
+      </button>
+    </li>
+    <li
+      key="3"
+    >
+      53
+       
+      <button
+        onClick={[Function]}
+      >
+        ✖
+      </button>
+    </li>
+  </FlipMovePropConverter>
+</ul>
+`;
