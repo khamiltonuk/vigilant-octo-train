@@ -6,10 +6,8 @@ export default function Screen(props) {
     props.keypadPress(e.target.value);
   }
   function handleSubmit(e) {
-    console.log(1);
     e.preventDefault();
     if (props.displayValue !== "0" && props.displayValue !== "") {
-      console.log(2);
       props.enterNumber(props.displayValue);
     }
   }

@@ -32,8 +32,8 @@ describe("Screen", () => {
   test.skip("should...u", () => {
     const wrapper = shallow(<Screen {...props} />);
     const input = wrapper.find("[data-q='input-field']");
-    console.log(input.debug());
-    input.simulate("change", { currentTarget: { value: 4 } });
+    console.log(input.currentTarget);
+    input.simulate("change", { currentTarget: { value: "4" } });
     expect(props.enterNumber).toHaveBeenCalledWith(5);
   });
 });

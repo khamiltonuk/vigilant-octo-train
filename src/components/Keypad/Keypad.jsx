@@ -7,7 +7,7 @@ export default function Keypad(props) {
   const { keypadPress, clearInput, clearAll, calculate } = props;
   const operations = [
     "Add All",
-    "Aquare All",
+    "Square All",
     "Mean All",
     "Mean of All Squared",
     "Get Variance"
