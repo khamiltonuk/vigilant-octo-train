@@ -107,11 +107,11 @@ exports[`Keypad should match the snapshot 1`] = `
   </button>
   <button
     className="operation-key"
-    data-q="aquare-all"
+    data-q="square-all"
     key="1"
     onClick={[Function]}
   >
-    Aquare All
+    Square All
   </button>
   <button
     className="operation-key"

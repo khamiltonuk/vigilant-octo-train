@@ -20,7 +20,7 @@ describe("stringToNumbers", () => {
 
 describe("squareAll", () => {
   test("should sqaures all numbers in an array", () => {
-    expect(calculateOperation([1, 2, 3, 4], "squareAll")).toEqual([
+    expect(calculateOperation([1, 2, 3, 4], "Square All")).toEqual([
       1,
       4,
       9,
@@ -35,7 +35,7 @@ describe("squareAll", () => {
 
 describe("addAll", () => {
   test("should compute the sum of the list of numbers", () => {
-    expect(calculateOperation([1, 2, 3, 4], "addAll")).toEqual(10);
+    expect(calculateOperation([1, 2, 3, 4], "Add All")).toEqual(10);
   });
 
   test("should compute the sum of the list of strings contianing numbers", () => {
@@ -45,7 +45,7 @@ describe("addAll", () => {
 
 describe("meanAll", () => {
   test("should compute the mean value of the list of numbers", () => {
-    expect(calculateOperation([1, 2, 3, 4], "meanAll")).toEqual(2.5);
+    expect(calculateOperation([1, 2, 3, 4], "Mean All")).toEqual(2.5);
   });
 
   test("should compute the mean value of the list of numbers", () => {
@@ -55,7 +55,9 @@ describe("meanAll", () => {
 
 describe("meanOfAllSquared", () => {
   test("should compute the mean value of the numbers squared in the list", () => {
-    expect(calculateOperation([1, 2, 3, 4], "meanOfAllSquared")).toEqual(7.5);
+    expect(calculateOperation([1, 2, 3, 4], "Mean of All Squared")).toEqual(
+      7.5
+    );
   });
   test("should compute the mean value of the numbers squared in the list", () => {
     expect(meanOfAllSquared(["1", "2", "3", "4"])).toEqual(7.5);
@@ -64,7 +66,7 @@ describe("meanOfAllSquared", () => {
 
 describe("getVariance", () => {
   test("should compute the variance of the numbers in the list", () => {
-    expect(calculateOperation([1, 2, 3, 4], "getVariance")).toEqual([
+    expect(calculateOperation([1, 2, 3, 4], "Get Variance")).toEqual([
       -1.5,
       -0.5,
       0.5,

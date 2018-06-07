@@ -36,9 +36,13 @@ export default function(state = initialState, { type, payload }) {
     case CLEAR_INPUT:
       return { ...state, displayValue: "" };
     case REMOVE_VALUE:
-      var newState = state.values;
-      newState.splice(payload, 1);
-      return { ...state, values: newState };
+      return {
+        ...state,
+        values: [
+          ...state.values.slice(0, payload),
+          ...state.values.slice(payload + 1)
+        ]
+      };
     case KEYPAD_PRESS:
       return { ...state, displayValue: state.displayValue + payload };
     default:

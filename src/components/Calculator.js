@@ -1,7 +1,7 @@
 import React from "react";
 import Keypad from "./Keypad/Keypad";
 import Screen from "./Screen/Screen";
-import History from "./Histroy/History";
+import History from "./History/History";
 
 const Calculator = props => {
   const {
