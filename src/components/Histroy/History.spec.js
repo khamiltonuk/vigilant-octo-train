@@ -20,14 +20,14 @@ describe("History", () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
-  test.skip("should behave...", () => {
+  test("should behave...", () => {
     const props = {
       values: [25, 35, 535, 53],
-      removeValue: () => true
+      removeValue: jest.fn()
     };
     const wrapper = shallow(<History {...props} />);
     const button = wrapper.find("button").first();
     button.simulate("click");
-    expect(wrapper.find("li").length).toBe(3);
+    expect(props.removeValue).toHaveBeenCalledWith(0);
   });
 });

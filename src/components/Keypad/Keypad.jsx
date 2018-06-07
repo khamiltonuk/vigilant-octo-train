@@ -1,4 +1,5 @@
 import React from "react";
+import kebabCase from "lodash/kebabCase";
 
 import "./Keypad.css";
 
@@ -14,18 +15,32 @@ export default function Keypad(props) {
   return (
     <div className="keypad group">
       {[...Array(10)].map((e, i) => (
-        <button className="number-key" key={i} onClick={() => keypadPress(i)}>
+        <button
+          className="number-key"
+          data-q={`number-key-${i}`}
+          key={i}
+          onClick={() => keypadPress(i)}
+        >
           {i}
         </button>
       ))}
-      <button className="operation-key" onClick={() => clearInput()}>
+      <button
+        className="operation-key"
+        data-q="clear"
+        onClick={() => clearInput()}
+      >
         clear
       </button>
       <button className="operation-key" onClick={() => clearAll()}>
         clear all
       </button>
       {operations.map((e, i) => (
-        <button className="operation-key" key={i} onClick={() => calculate(e)}>
+        <button
+          className="operation-key"
+          data-q={kebabCase(e)}
+          key={i}
+          onClick={() => calculate(e)}
+        >
           {e}
         </button>
       ))}

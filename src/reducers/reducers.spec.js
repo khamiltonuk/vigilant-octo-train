@@ -66,4 +66,12 @@ describe("Reducer", () => {
       expect(state).toEqual({ displayValue: "02", values: ["3"] });
     });
   });
+
+  test("should return original state if unrecognised action", () => {
+    let state = reducers(
+      { displayValue: "0", values: ["3"] },
+      { type: "UNKNOWN", payload: 2 }
+    );
+    expect(state).toEqual({ displayValue: "0", values: ["3"] });
+  });
 });
