@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator should render correctly 1`] = `
+<div
+  className="calculator"
+>
+  <Screen />
+  <Keypad />
+  <History />
+</div>
+`;
