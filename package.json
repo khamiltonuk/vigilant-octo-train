@@ -2,10 +2,12 @@
   "name": "kristian-react-calculator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://khamiltonuk.github.io/vigilant-octo-train/",
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
+    "gh-pages": "^1.2.0",
     "react-scripts": "1.1.4"
   },
   "dependencies": {
