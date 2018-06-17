@@ -18,6 +18,7 @@ const Calculator = props => {
     <div className="calculator">
       <Screen
         displayValue={displayValue}
+        keypadPress={keypadPress}
         enterNumber={enterNumber}
         wipeInput={clearInput}
       />

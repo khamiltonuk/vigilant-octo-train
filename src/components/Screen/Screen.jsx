@@ -3,7 +3,8 @@ import "./Screen.css";
 
 export default function Screen(props) {
   function handleChange(e) {
-    props.keypadPress(e.target.value);
+    //console.log("change");
+    props.displayValue = e.target.value;
   }
   function handleSubmit(e) {
     e.preventDefault();
